@@ -1,4 +1,7 @@
 {% extends 'layout.html' %}
 {% block content %}
-    Hello there
+{% for post in posts %}
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.description }}</p>
+{% endfor %}
 {% endblock %}
