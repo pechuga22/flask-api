@@ -1,10 +1,10 @@
 from flaskblog import app
 from flask import render_template
 
-@app.route('/saludo')
+@app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/')
-def home1():
-    return 'princip[al]'    
+@app.route('/about')
+def about():
+    return render_template('about.html', title = 'About')    
