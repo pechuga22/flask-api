@@ -30,3 +30,10 @@ def register():
     if form.validate_on_submit():
         flash(f'User created', 'success')
     return  render_template('register.html', title='Register', form = form)
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        flash(f'User Logged in', 'success')
+    return  render_template('login.html', title='Login', form = form)    
